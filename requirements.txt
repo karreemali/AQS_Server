@@ -1,0 +1,5 @@
+Flask
+RPi.GPIO
+pms5003
+dht11
+sht-sensor
