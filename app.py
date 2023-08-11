@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 
 from flask import Flask, render_template, request, jsonify
-import logging
-from logging import Formatter, FileHandler
-from forms import *
 import os
 
 from modules.sensors import *
@@ -14,7 +11,7 @@ def home():
     '''
     healthcheck endpoint for flask
     '''
-    return "SUCCESS"
+    return 200
 
 @app.route('/sensors')
 def sensors():
