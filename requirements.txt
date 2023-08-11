@@ -3,3 +3,4 @@ RPi.GPIO
 pms5003
 dht11
 sht-sensor
+mh_z19
