@@ -5,22 +5,24 @@ import os
 
 from modules.sensors import *
 
+app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
     '''
     healthcheck endpoint for flask
     '''
-    return 200
+    return {"statusCode": 200}
 
 @app.route('/sensors', methods=['GET'])
 def sensors():
     '''
     initialize the package, then read all sensors within package
+    return the data to the page
     '''
     package = read_sensors()
-    data = jsonify(package)
-    return """<meta http-equiv="refresh" content="30" />{}""".format(data) # TODO: make content configurable
+    return jsonify(package)
+    #return """<html><meta http-equiv="refresh" content="30" />{}</html>""".format(data) # TODO: make content configurable
 
 
 if __name__ == '__main__':

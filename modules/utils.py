@@ -2,10 +2,13 @@
 
 from datetime import datetime
 import json
+import os
 
-def read_config():
-    with open("../config.json", "r") as f:
-        return json.load(f.read())
+def read_config() -> dict:
+    path_name = f"config.json"
+    print(path_name)
+    with open(path_name, "r") as f:
+        return json.loads(f.read())
 
-def get_datetime():
-    return datetime.now().strftime("%Y%m%dT%H:%M:%S")
+def get_datetime() -> dict:
+    return {"timestamp": datetime.now().strftime("%Y%m%dT%H:%M:%S")}

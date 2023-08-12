@@ -1,0 +1,13 @@
+{
+  "data": {
+    "location": "bathroom",
+    "network": "network1"
+  },
+  "null": {
+    "location": "__ERROR__",
+    "network": "__ERROR__"
+  },
+  "sleepy": 30, 
+  "timestamp": true
+}
+
